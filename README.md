@@ -78,13 +78,22 @@
 七 编码建议
 =============
 
-1 编码中考虑到其他python实现的效率等问题，比如运算符‘+'在CPython（Python）中效率很高，都是Jython中却非常低，所以应该采用.join()的方式。
-2 尽可能使用‘is'‘is not'取代‘=='，比如if x is not None 要优于if x。
-3 使用基于类的异常，每个模块或包都有自己的异常类，此异常类继承自Exception。
+1、编码中考虑到其他python实现的效率等问题，比如运算符‘+'在CPython（Python）中效率很高，都是Jython中却非常低，所以应该采用.join()的方式。
+
+2、尽可能使用‘is'‘is not'取代‘=='，比如if x is not None 要优于if x。
+
+3、使用基于类的异常，每个模块或包都有自己的异常类，此异常类继承自Exception。
+
 4 异常中不要使用裸露的except，except后跟具体的exceptions。
+
 5 异常中try的代码尽可能少。
+
 6 使用startswith() and endswith()代替切片进行序列前缀或后缀的检查。
+
 7 使用isinstance()比较对象的类型。
+
 8 判断序列空或不空
+
 9 字符串不要以空格收尾。
+
 10 二进制数据判断使用 if boolvalue的方式。
